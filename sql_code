@@ -44,3 +44,25 @@ select * from reviews;
 
 #Question2
 
+create database contacts;
+create table contact(
+id int primary key,Email varchar(30) not null,fname varchar(30) not null,
+inname varchar(30) not null,company varchar(30) not null,active_flag int not null,opt_out int not null);
+
+insert into contact values(123,"a@a.com","Kian","Seth","ABC",1,1),
+(133,"b@a.com","Neha","Seth","ABC",1,0),
+(234,"c@c.com","Puru","Malik","CDF",0,0),
+(342,"d@d.com","Sid","Maan","TEG",1,0);
+select * from contact;
+-- query1
+select * from contact where active_flag=1;
+-- query2
+update contact set active_flag=0 where opt_out=0;
+-- query3
+delete from contact where company="ABC";
+-- query4
+insert into contact values(658,"mili@gmail.com","mili"," ","DGH",1,1);
+-- query5
+select distinct(company) from contact;
+-- query6
+update contact set fname="niti" where fname="mili";
