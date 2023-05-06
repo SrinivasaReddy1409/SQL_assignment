@@ -1,0 +1,46 @@
+#Question1
+
+create database hospital;
+create table doctor(
+id int primary key ,doctor_name varchar(30) not null,specialization varchar(30) not null,gender varchar(10) not null
+);
+create table appointments(
+appointment_date date primary key,patient_name varchar(30) not null,doctor_name varchar(30) not null,appointment_id int not null
+);
+create table patient(
+patient_name varchar(30) primary key,age int not null,gender varchar(10) not null,complication varchar(30) not null
+);
+create table reviews(
+patient_name varchar(30) primary key,doctor_name varchar(30) not null,feedback varchar(30) not null
+);
+
+insert into doctor values(1,"Srinivas","Orthopedic","Male"),
+(2,"Gayathri","Gynaecologist","Female"),
+(3,"Raghav","Cardiologist","Male"),
+(4,"Sumanth","Neurologist","Male");
+
+insert into appointments values("2023-05-01","Ram","Sumanth",1),
+("2023-05-02","Ramesh","Raghav",1),
+("2023-05-03","Smrithi","Gayathri",1),
+("2023-05-04","Sameer","Srinivas",1),
+("2023-05-05","Rohit","Srinivas",2);
+
+insert into patient values("Rohit",23,"Male","Fractured Bone"),
+("Ram",40,"Male","Alzheimer's"),
+("Ramesh",35,"Male","High Blood Pressure"),
+("Smrithi",27,"Male","Pregnancy Check-up"),
+("Sameer",19,"Male","A.C.L tear");
+
+insert into reviews values("Rohit","Srinivas","Good"),
+("Ram","Sumanth","Average"),
+("Ramesh","Raghav","Good solutions"),
+("Smrithi","Gayathri","Great precautions"),
+("Sameer","Srinivas","Suggested good recovery");
+
+select * from doctor;
+select * from appointments;
+select * from patient;
+select * from reviews;
+
+#Question2
+
