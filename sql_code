@@ -66,3 +66,7 @@ insert into contact values(658,"mili@gmail.com","mili"," ","DGH",1,1);
 select distinct(company) from contact;
 -- query6
 update contact set fname="niti" where fname="mili";
+
+#Question3
+
+
