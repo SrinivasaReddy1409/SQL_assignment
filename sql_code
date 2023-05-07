@@ -5,7 +5,7 @@ create table doctor(
 id int primary key ,doctor_name varchar(30) not null,specialization varchar(30) not null,gender varchar(10) not null
 );
 create table appointments(
-appointment_date date primary key,patient_name varchar(30) not null,doctor_name varchar(30) not null,appointment_id int not null
+appointment_date date primary key,appointment_time time,patient_name varchar(30) not null,doctor_name varchar(30) not null,appointment_id int not null
 );
 create table patient(
 patient_name varchar(30) primary key,age int not null,gender varchar(10) not null,complication varchar(30) not null
@@ -19,11 +19,11 @@ insert into doctor values(1,"Srinivas","Orthopedic","Male"),
 (3,"Raghav","Cardiologist","Male"),
 (4,"Sumanth","Neurologist","Male");
 
-insert into appointments values("2023-05-01","Ram","Sumanth",1),
-("2023-05-02","Ramesh","Raghav",1),
-("2023-05-03","Smrithi","Gayathri",1),
-("2023-05-04","Sameer","Srinivas",1),
-("2023-05-05","Rohit","Srinivas",2);
+insert into appointments values("2023-05-01","10:30:00","Ram","Sumanth",1),
+("2023-05-02","9:00:00","Ramesh","Raghav",1),
+("2023-05-03","12:15:00","Smrithi","Gayathri",1),
+("2023-05-04","14:30:00","Sameer","Srinivas",1),
+("2023-05-05","16:45:00","Rohit","Srinivas",2);
 
 insert into patient values("Rohit",23,"Male","Fractured Bone"),
 ("Ram",40,"Male","Alzheimer's"),
@@ -41,7 +41,6 @@ select * from doctor;
 select * from appointments;
 select * from patient;
 select * from reviews;
-
 #Question2
 
 create database contacts;
